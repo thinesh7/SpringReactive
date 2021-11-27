@@ -1,0 +1,9 @@
+package com.reactive.utils;
+
+public class AppUtils<T, R> {
+
+	public <R> void dtoToEntity(T){
+		return null;
+	}
+
+}

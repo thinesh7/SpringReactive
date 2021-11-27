@@ -1,0 +1,35 @@
+package com.bms.handler;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
+import com.bms.dto.CustomerDTO;
+import com.bms.repository.CustomerRepository;
+import com.bms.util.AppUtils;
+import reactor.core.publisher.Mono;
+
+@Service
+public class BMSHandler {
+
+	@Autowired
+	private CustomerRepository custRepo;
+
+	public Mono<ServerResponse> createACustomer(ServerRequest request) {
+
+		request.bodyToMono(CustomerDTO.class)
+				.map(i -> AppUtils.convertCustomerDTOtoCustomerEntity(i))
+				.flatMap(i -> custRepo.checkCustomerAlreadyExist(i.getCustomerSSNID(), i.getCustomerMobileNumber()))
+				.flatMap(i -> {
+					if (i != null) {
+						return Mono.error(new Exception("Already Exist da..!"));
+					}else {
+						return custRepo.save(i)
+					}					
+				}).flatMap(i -> custRepo.save(i)).map(i -> AppUtils.converCustomerEntityToCustomerDTO(i));
+
+		return ServerResponse.ok().contentType(MediaType.TEXT_EVENT_STREAM).body(result, CustomerDTO.class);
+	}
+
+}

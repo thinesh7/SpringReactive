@@ -1,0 +1,8 @@
+1630223331669	Copy package
+1630223383604	Copy package
+1630224667830	Copy package
+1630230830887	Extract local variable 'log'
+1630231421575	Extract local variable 'block'
+1630231663347	Extract local variable 'subscribe'
+1630329311718	Copy package
+1630392720731	Extract local variable 'parseDouble'

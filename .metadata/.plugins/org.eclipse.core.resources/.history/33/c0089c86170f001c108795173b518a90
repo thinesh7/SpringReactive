@@ -1,0 +1,15 @@
+package com.bms.repository;
+
+import org.springframework.data.r2dbc.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import com.bms.entities.Customer;
+
+import reactor.core.publisher.Mono;
+
+public interface CustomerRepository extends ReactiveCrudRepository<Customer, Long> {
+
+	@Query("SELECT * FROM Customer c WHERE c.customerSSNID =?1 and c.customerMobileNumber=?2")
+	public Mono<Customer> checkCustomerAlreadyExist(@Param("status") String customerSSNID,
+			String customerSSNID, String customerMobileNumber);
+}

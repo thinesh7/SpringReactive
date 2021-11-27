@@ -1,0 +1,13 @@
+package com.reactive.utils;
+
+public class AppUtils<T, R> {
+
+	public <R extends Integer>R dtoToEntity(T Object){
+		
+		R r = new R();
+		
+		
+		return null;
+	}
+
+}

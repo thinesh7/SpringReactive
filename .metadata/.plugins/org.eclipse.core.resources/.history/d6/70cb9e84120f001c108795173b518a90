@@ -1,0 +1,9 @@
+package com.bms.repository;
+
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import com.bms.entities.Customer;
+
+public interface CustomerRepository extends ReactiveCrudRepository<Customer, Long>{
+
+	public Customer getCustomerBycustomerMobileNumber
+}

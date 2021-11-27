@@ -1,0 +1,6 @@
+package com.reactive.repository;
+
+
+public interface ProductRepository extends {
+
+}

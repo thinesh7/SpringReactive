@@ -1,0 +1,7 @@
+package com.reactive.entities;
+
+public class ProductEvent {
+
+	private Long eventId;
+	
+}

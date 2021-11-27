@@ -1,0 +1,5 @@
+package com.reactive.dto;
+
+public class ProductDTO {
+
+}

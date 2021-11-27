@@ -1,0 +1,35 @@
+package com.bms.helper;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.bms.dto.CustomerDTO;
+import com.bms.entities.Customer;
+import com.bms.repository.CustomerRepository;
+import com.bms.util.AppUtils;
+
+import reactor.core.publisher.Mono;
+
+@Component
+public class BMSHelper {
+
+	@Autowired
+	private CustomerRepository custRepo;
+
+	private CustomerDTO result;
+
+	public Mono<CustomerDTO> createCustomer(CustomerDTO dto) {
+		Mono<CustomerDTO> res = custRepo
+				.checkCustomerAlreadyExist(dto.getCustomerSSNID(), dto.getCustomerMobileNumber()).flatMap(i -> {
+					System.out.println("Exp");
+					return Mono.error(new Exception("Already Exist"));
+				}).doOnSuccess(j -> {
+					custRepo.save(AppUtils.convertCustomerDTOtoCustomerEntity(dto)).subscribe(i -> {
+						result = AppUtils.converCustomerEntityToCustomerDTO(i);
+						System.out.println();
+					});
+				}).thenReturn(result);
+		return res;
+	}
+
+}

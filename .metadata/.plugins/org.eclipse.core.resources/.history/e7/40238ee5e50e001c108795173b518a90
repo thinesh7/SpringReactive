@@ -1,0 +1,9 @@
+package com.bms.repository;
+
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+
+import com.bms.entities.Account;
+
+public class AccountRepository implements ReactiveCrudRepository<Account, Long> {
+
+}
