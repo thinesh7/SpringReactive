@@ -1,5 +1,0 @@
-package com.bms.repository;
-
-public interface CustomerRepository extends {
-
-}

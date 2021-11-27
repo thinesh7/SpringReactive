@@ -1,8 +1,0 @@
-package com.reactive.entities;
-
-public class Product {
-
-	private String productId;
-	private String productName;
-	private String productPrice;
-}

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=App01-Spirng-Reactive/C:\/Program Files\/Java\/jdk1.8.0_241\/jre\/lib\/rt.jar=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.util.stream(Collector.class[Collector" modifiers="1537" timestamp="1582970555548"/>
-    <typeInfo handle="=App01-Spirng-Reactive/C:\/Program Files\/Java\/jdk1.8.0_241\/jre\/lib\/rt.jar=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.util.function(Supplier.class[Supplier" modifiers="1537" timestamp="1582970555548"/>
-    <typeInfo handle="=App01-Spirng-Reactive/C:\/Users\/THINESH\/.m2\/repository\/io\/projectreactor\/reactor-core\/3.4.9\/reactor-core-3.4.9.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/io.projectreactor=/=/maven.artifactId=/reactor-core=/=/maven.version=/3.4.9=/=/maven.scope=/compile=/&lt;reactor.core.scheduler(Scheduler.class[Scheduler" modifiers="1537" timestamp="1629969237504"/>
-    <typeInfo handle="=App01-Spirng-Reactive/C:\/Users\/THINESH\/.m2\/repository\/org\/reactivestreams\/reactive-streams\/1.0.3\/reactive-streams-1.0.3.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.reactivestreams=/=/maven.artifactId=/reactive-streams=/=/maven.version=/1.0.3=/=/maven.scope=/compile=/&lt;org.reactivestreams(Publisher.class[Publisher" modifiers="1537" timestamp="1627556876691"/>
-</typeInfoHistroy>
